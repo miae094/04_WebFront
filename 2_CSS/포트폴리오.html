@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="css/포트폴리오.css">
+    <script src="https://kit.fontawesome.com/5e3afa71fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <!-- 로고 및 바 부분 -->
+            <section class="home-logo">
+                <button id="bar" class="fa-solid fa-bars"></button>
+                <a href="#">
+                    <img src="/images/portfolio/youtube_logo.png">
+                </a>
+            </section>
+
+            <!-- 검색창 -->
+
+            <section class="search-area">
+                <!-- form 내부 input 태그값을 서버 또는 페이지로 제출/전달 -->
+                <form action="#" name="search-form">
+                    <!-- fieldset: form 태그 내부에서 input을 종류별로 묶는 용도로 자주 사용 -->
+                    <fieldset>
+                        <!-- autocomplete: HTML 기본 자동완성 사용 X -->
+                        <input type="search" id="query" name="query"
+                        autocomplete="off" placeholder=" 검색">
+                        <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
+                    </fieldset>
+                </form>
+            </section>
+
+
+            <!-- voice 버튼 -->
+            <section class="voice-search">
+                <button id="voice-btn"class="fa-solid fa-microphone" style="color: #000000;"></button>
+            </section>
+            
+            <!-- 로그인버튼 -->
+            <section class="login-area">
+                <button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button>
+                <button class="fa-regular fa-circle-user"> 로그인</button>
+
+            </section>
+        </header>
+
+
+        <section class="content">
+            <section class="menu">
+                <nav>                     <!-- 메뉴 -->
+                    <div id="m-1">
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-house"></i>홈</button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-bolt"></i> 쇼츠</button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-play"></i>구독</button>
+                    </div>
+                    
+                    <div id="m-2">
+                        <button class="menu-btn">
+                        <i class="fa-regular fa-circle-user"></i>내 페이지</button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-clock-rotate-left"></i>시청 기록</button>
+                    </div>
+                    
+                    <div id="m-3">
+                        <p>로그인하면 동영상에 좋아요를 표시하고 댓글을 달거나 구독할 수 있습니다.</p>
+                        <button id="login_2" class="fa-regular fa-circle-user"> 로그인</button>
+                    </div>
+                    
+                    <div id="m-4">
+                        <p>탐색</p>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-fire"></i>인기 급상승
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-bag-shopping"></i>쇼핑
+                        </button>
+                        <button class="menu-btn">
+                         <i class="fa-solid fa-music"></i>음악
+                        </button>
+                        <button class="menu-btn">
+                        <i class="fa-solid fa-clapperboard"></i>영화
+                         </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-play"></i>실시간
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-gamepad"></i>게임
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-trophy"></i>스포츠
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-graduation-cap"></i>학습 프로그램
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-podcast"></i>팟캐스트
+                        </button>
+
+                    </div>
+                    
+                    <div id="m-5">
+                        <p>YouTube 더보기</p>
+                        <button class="menu-btn">
+                            <i class="fa-brands fa-youtube"></i>YouTube Premium
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-record-vinyl"></i>YouTube Nusic
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-brands fa-youtube"></i>YouTube Kids
+                        </button>
+                    </div>
+                    
+                    <div id="m-6">
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-gear"></i>설정
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-regular fa-flag"></i>신고기록
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-regular fa-circle-question"></i>고객센터
+                        </button>
+                        <button class="menu-btn">
+                            <i class="fa-solid fa-circle-exclamation"></i>의견 보내기
+                        </button>
+
+                    </div>
+                    
+                    <div class="menu-bottom">
+                       <span><a href="#">정보</a> <a href="#">보도자료</a> <a href="#">저작권</a></span>
+                       <span><a href="#">문의하기</a> <a href="#">크리에이터</a> <a href="#">광고</a></span>
+                       <span><a href="#">개발자</a></span>
+                        <br>
+                       <span><a href="#">약관</a> <a href="#">개인정보처리방침</a></span>
+                       <span><a href="#">정책 및 안전</a></span>
+                       <span><a href="#">YouTube 작동의 원리</a></span>
+                       <span><a href="#">새로운 기능 테스트하기</a></span>
+
+                       <p id="Copyright">
+                        © 2025 Google LLC, Sundar Pichai, 1600 Amphitheatre Parkway, Mountain View CA 94043, USA, 0807-882-594 (무료), yt-support-solutions-kr@google.com, 호스팅: Google LLC, <a href="#">사업자정보,</a> <a href="#">불법촬영물 신고</a>
+크리에이터들이 유튜브 상에 게시, 태그 또는 추천한 상품들은 판매자들의 약관에 따라 판매됩니다. 유튜브는 이러한 제품들을 판매하지 않으며, 그에 대한 책임을 지지 않습니다.
+                       </p>
+                    </div>
+                    
+                </nav>
+               
+            </section>
+            <!-- 영상 표시 영역 -->
+            <section class="videos">
+                <div class="recommend-menu">
+                    <button>전체</button>
+                    <button>뉴스</button>
+                    <button>라이브</button>
+                    <button>야구</button>
+                    <button>음악</button>
+                    <button>게임</button>
+                    <button>관광</button>
+                    <button>축구</button>
+                    <button>최근에 업로드된 동영상</button>
+                </div>
+                <div class="video-section">
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video1.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/channels4_profile.jpg"></div>
+                        <div><a href= "#">[About Jeans] 재미로 하니🙃 EP.4 미아랑 밀리를 보러 가는 재미 | HANNI vlog</a>
+                            <p>뉴진스 NewJeans</p>
+                            <p>조회수 386만회· 7일전</p>
+                        </div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video2.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/channels4_profile.jpg"></div>
+                        <div><a href= "#">[About Jeans] MINJI SCENE🎬 #3 도쿄 가요? | MINJI vlog</a>
+                            <p>뉴진스 NewJeans</p>
+                            <p>조회수 278만회· 10일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video3.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/channels4_profile.jpg"></div>
+                        <div><a href= "#">[About Jeans] :D Days🌻 (Day 1) 호주에 갔다니 | DANIELLE vlog</a>
+                            <p>뉴진스 NewJeans</p>
+                            <p>조회수 342만회· 3일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video4.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/channels4_profile.jpg"></div>
+                        <div><a href= "#">[About Jeans] 재미로 하니🙃 EP.7 back home 🏡 | HANNI vlog</a>
+                            <p>뉴진스 NewJeans</p>
+                            <p>조회수 785만회· 2주전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video5.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/sbs_profile.jpg"></div>
+                        <div><a href= "#">[페이스캠4K] 엔시티 드림 마크 'When I’m With You' (NCT DREAM MARK FaceCam) @SBS Inkigayo 241124</a>
+                            <p>SBSKPOP ZOOM</p>
+                            <p>조회수 356만회· 10일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video6.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/channels4_profile.jpg"></div>
+                        <div><a href= "#">[About Jeans] MINJI SCENE🎬 #10 런던 가요? | MINJI vlog</a>
+                            <p>뉴진스 NewJeans</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video7.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/sbs_profile.jpg"></div>
+                        <div><a href= "#">[얼빡직캠 4K] 엔시티 127 마크 '삐그덕 (Walk)'(NCT 127 MARK Facecam) @뮤직뱅크(Music Bank) 240726</a>
+                            <p>SBSKPOP ZOOM</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video8.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/sbs_profile.jpg"></div>
+                        <div><a href= "#">[얼빡직캠 4K] 엔시티 127 마크 '삐그덕 (Walk)'(NCT 127 MARK Facecam) @뮤직뱅크(Music Bank) 240719</a>
+                            <p>SBSKPOP ZOOM</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video9.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/M2_profile.jpg"></div>
+                        <div><a href= "#">[MPD직캠] 해찬 직캠 4K '+82 Pressin' (Feat. 해찬)' (HAECHAN FanCam) | @MCOUNTDOWN_2025.3.20</a>
+                            <p>M2</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video10.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/mnet_logo.jpg"></div>
+                        <div><a href= "#">'단독 공개' 마크 (MARK) - +82 Pressin’ (Feat. 해찬) #엠카운트다운 EP.880 | Mnet 250320 방송</a>
+                            <p>Mnet-K-POP</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video11.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/mbc_logo.jpg"></div>
+                        <div><a href= "#">[#최애직캠] NCT DREAM HAECHAN (엔시티 드림 해찬) – When I’m With You | 쇼! 음악중심 | MBC241116방송</a>
+                            <p>MBCkpop</p>
+                            <p>조회수 386만회· 7일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+                <div class="videos-item">
+                    <div><a href= "#"><img src="/images/portfolio/video12.jpg"></a></div>
+                    <div id="img-div">
+                        <div><img src = "/images/portfolio/nct_logo.jpg"></div>
+                        <div><a href= "#">MARK : 1999, Toronto</a>
+                            <p>NCT</p>
+                            <p>조회수 798만회· 1일전</p></div>
+                        <div><button class="fa-solid fa-ellipsis-vertical" style="color: #000000;"></button></div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            </section>
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </main>
+    
+
+</body>
+</html>
