@@ -1,4 +1,4 @@
-// 클릭시 입력창 활성화
+
 /* 힌트.
 1. input 태그가 focus를 잃었을 때 (blur) : 요소.addEventListener("blur", () => {})
 2. classList.toggle() : 지정된 클래스가 요소에 존재하면 제거하고,
@@ -11,6 +11,7 @@ const btns = document.querySelector(".edit-container"); // 추가 / 삭제 / 종
 const menuContainer = document.querySelector(".menu-container"); // 메뉴 컨테이너
 const menuList = document.querySelectorAll(".menu"); // li 메뉴
 
+// 클릭시 입력창 활성화
 document.getElementById("resName").addEventListener("click", (e) => {
     const inputBox = document.getElementById("resNameInput");
 
@@ -18,19 +19,21 @@ document.getElementById("resName").addEventListener("click", (e) => {
     inputBox.style.display="block";
     inputBox.focus();
 
+    // input 태그가 focus를 잃었을 때
     inputBox.addEventListener("blur", () => {
         
+        // input 이 공백일 경우
         if(inputBox.value.length == 0){
             e.target.style.display = "block";
             inputBox.style.display="none";
             return;
         }
+
+        // span 에 input에 입력된 value 값을 넣고 display 속성 변경
         e.target.innerText = inputBox.value;
         e.target.style.display = "block";
         inputBox.style.display="none";
-        
     });
-
 })
 
 // 수정 버튼 눌렀을 때 추가 / 삭제 / 종료 버튼 뜨도록
@@ -43,7 +46,7 @@ updateBtn.addEventListener("click", () => {
     const menuName = document.querySelectorAll(".menu-name");
     const menuPrice = document.querySelectorAll(".menu-price");
 
-    for(let i = 0; i < menuName.length; i++){
+    for(let i = 0; i < menuName.length; i++){   // span 의 갯수만큼 for문에서 반복 
         // input box 생성
         const menu = document.createElement("li");
         menu.classList.add("menu");
@@ -55,8 +58,8 @@ updateBtn.addEventListener("click", () => {
         const menuNameInput = document.createElement("input"); // 가격 입력
         menuNameInput.classList.add("menu-name-input");
         
-        if(menuName[i].innerText =="미입력"){
-            menuNameInput.setAttribute("placeholder", "메뉴명");
+        if(menuName[i].innerText =="미입력"){   // span에 들어있는 값이 미입력일경우(기존에 값을 입력하지 않았을 때)
+            menuNameInput.setAttribute("placeholder", "메뉴명"); // placeholder를 메뉴명으로 바꿔줌
         } else {
             menuNameInput.value = menuName[i].innerText;
         }
@@ -64,25 +67,25 @@ updateBtn.addEventListener("click", () => {
         const menuPriceInput = document.createElement("input");
         menuPriceInput.classList.add("menu-price-input");
 
-        if(menuPrice[i].innerText =="0원"){
-            menuPriceInput.setAttribute("placeholder", "가격");
+        if(menuPrice[i].innerText =="0원"){     //span에 들어있는 값이 0원일경우(기존에 값을 입력하지 않았을 때)
+            menuPriceInput.setAttribute("placeholder", "가격");  // placeholder를 가격으로 바꿔줌
         } else {
             // 기존 가격에서 문자를 제외한 숫자만 가져와서 value 에 넣도록 함.
             //let regExp = /[^0-9]/g
-            let regExp = /[^0-9]/;// 숫자가 아닌 문자열을 선택하는 정규식
+            let regExp = /[^0-9]/;      // 숫자가 아닌 문자열을 선택하는 정규식
             let onlyPrice = menuPrice[i].innerText.replace(regExp, "");
             menuPriceInput.value = onlyPrice;
         }
 
-
+        // li 태그 안에 추가
         menu.append(checkBox, menuNameInput, menuPriceInput);
         
         menuContainer.append(menu);
+
+        // 기존 부모 요소 삭제 (;o)
         menuName[i].parentElement.remove();
-        menuPrice[i].parentElement.remove();
+        //menuPrice[i].parentElement.remove();
     }
-
-
 });
 
 // 종료버튼 눌렀을 때 수정버튼 보이도록
@@ -119,17 +122,13 @@ document.getElementById("exitBtn").addEventListener("click", (e) => {
         // 가격이 있을 경우 해당 금액 입력
         
         console.log("menuPriceInput[i].value : " + menuPriceInput[i].value);
-        
-
-        
 
         menu.append(menuName, menuPrice);
-        
         menuContainer.append(menu);
-        menuNameInput[i].parentElement.remove();
-        menuPriceInput[i].parentElement.remove();
-    }
 
+        menuNameInput[i].parentElement.remove();
+        //menuPriceInput[i].parentElement.remove();
+    }
 })
 
 
@@ -151,12 +150,8 @@ document.getElementById("addMenu").addEventListener("click", () => {
     menuPriceInput.classList.add("menu-price-input");
     menuPriceInput.setAttribute("placeholder", "가격");
    
-
     menu.append(checkBox, menuNameInput, menuPriceInput);
-    
     menuContainer.append(menu);
-
-
 } );
 
 
@@ -172,5 +167,4 @@ document.getElementById("deleteMenu").addEventListener("click", () => {
             parent.remove();
         }
     }
-
 });
